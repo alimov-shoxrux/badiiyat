@@ -1,0 +1,73 @@
+@import url('https://fonts.cdnfonts.com/css/summer-farmhouse');
+
+.adib__img {
+    width: 630px;
+    height: 780px;
+    border-radius: 25px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.adib__div {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.adib__dates {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 20px;
+
+    h4 {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    h1 {
+        color: rgb(201, 172, 140);
+        font-size: 39px;
+        font-weight: 400;
+        font-family: 'Summer Farmhouse';
+    }
+
+    h3 {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+        font-weight: 300;
+        margin-top: 10px;
+    }
+}
+
+.adiv__detail {
+    padding: 50px 0;
+}
+
+.adib__right{
+    margin-top: 50px;
+    margin-left: 50px;
+    h1 {
+        color: rgb(201, 172, 140);
+        font-family: 'Summer Farmhouse';
+        font-size: 48px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
