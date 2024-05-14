@@ -8,15 +8,22 @@ import Adib from './pages/Adib/Adib'
 import BooksDetail from './pages/BooksDetail/BooksDetail'
 
 function App() {
+  let a = 0
+  console.time()
+  for (let i = 0; i < 10000; i++) {
+    a = a + i
+  }
+  console.timeEnd()
 
   return (
     <div className='App'>
-      <Header/>
+
+      <Header />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/book' element={<Book/>}/>
-        <Route path='/booksdetail/:id' element={<BooksDetail/>}/>
-        <Route path='/adib/:id' element={<Adib/>}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/book' element={<Book />} />
+        <Route path='/booksdetail/:id' element={<BooksDetail />} />
+        <Route path='/adib/:id' element={<Adib />} />
       </Routes>
     </div>
   )

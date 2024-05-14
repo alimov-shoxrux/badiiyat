@@ -3,12 +3,13 @@ import { useLocation, useParams } from 'react-router-dom'
 import { adib } from '../../lib/adib'
 import { books } from '../../lib/books'
 import './Adib.css'
+import BookcApp from '../../components/BooksCarusel/BooksCarusel'
+import BooksCard from '../../components/BooksCard/BooksCard'
 
 function Adib() {
   const { id } = useParams()
   let findAdib = adib.find((item) => item.id == id)
   let filBooks = books.filter((item) => item.adibId == id)
-  console.log(filBooks);
   return (
    <div className="container">
      <div className='adiv__detail'>
@@ -36,6 +37,16 @@ function Adib() {
         <div className="adib__right">
           <h1 className='adib__right__name'>{findAdib.name}</h1>
           <p>{findAdib.dis}</p>
+          
+          <ul className="books__list">
+            {
+              filBooks?.map((item,i)=>(
+                <li key={i} className="books__item">
+                <BooksCard item={item}/>
+              </li>
+              ))
+            }
+          </ul>
         </div>
       </div>
     </div>

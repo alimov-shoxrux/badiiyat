@@ -1,0 +1,46 @@
+.slider__app{
+    margin: 40px 0;
+    border-radius: 21px;
+    overflow: hidden;
+   
+    .swiper-slide{
+        height: 346;
+        border-radius: 21px;
+        overflow: hidden;
+        background-image: url(././img/bg.png);
+    }
+}
+
+.alloma__img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+       width: 25%;
+       height: 95%;
+    }
+}
+
+
+.alloma__img{
+    h1{
+        color: rgb(201, 172, 140);
+        font-size: 61px;
+        font-weight: 400;
+        line-height: 67px;
+        margin-left: 90px;
+    }
+}
+.swiper-pagination-bullet{
+    width: 57px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+
+}
+
+.swiper-pagination-bullet-active{
+    background: white;
+}
+

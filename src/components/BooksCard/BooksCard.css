@@ -1,0 +1,64 @@
+.BookCard {
+    color: white;
+
+    img {
+        width: 164px;
+        height: 246px;
+        border-radius: 15px;
+        object-fit: cover;
+    }
+
+    h4 {
+        color: var(--main--orange);
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        margin-top: 5px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+        font-weight: 300;
+    }
+}
+
+.books__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+        margin-right: 30px;
+        margin-bottom: 50px;
+        cursor: pointer;
+    }
+}
+
+.rating {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+
+    img {
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+        margin-top: 2px;
+    }
+
+    .rating__one{
+        display: flex;
+        align-items: center;   
+        
+    }
+    .rating__two{
+        p{
+            color: white    ;
+        }
+    }
+}

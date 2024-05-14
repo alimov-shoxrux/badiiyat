@@ -1,8 +1,13 @@
 import React from 'react'
+import SliderApp from '../Slider/Slider'
+import Search from '../Search/Search'
 
 function Hero() {
   return (
-    <div>Hero</div>
+    <div>
+      <SliderApp/>
+      <Search/>
+    </div>
   )
 }
 
