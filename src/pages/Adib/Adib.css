@@ -71,3 +71,11 @@
         font-weight: 400;
     }
 }
+
+.not__books{
+    color: wheat;
+    font-size: 15px;
+    margin-top: 100px;
+    box-shadow: 0 0 10px 1px #353434;
+    padding: 20px 150px;
+}
