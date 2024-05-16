@@ -12,8 +12,8 @@
 
 .books_dl {
     img {
-        width: 519.29px;
-        height: 810.13px;
+        width: 400.29px;
+        height: 500.13px;
         border-radius: 15px;
     }
 }
@@ -30,7 +30,7 @@
     }
 
     .books_da {
-        margin-top: 16px; 
+        margin-top: 16px;
         color: rgb(153, 131, 108);
         font-size: 16px;
         font-weight: 400;

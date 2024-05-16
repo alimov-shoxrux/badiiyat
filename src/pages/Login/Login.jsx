@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 function Login() {
   const [show, setShow] = useState(true)
   const [confirm, setConfirm] = useState(false)
-  const [data,setData] = useState([])
+  const [data, setData] = useState([])
   const navigate = useNavigate()
 
   function fnUp(e) {
@@ -32,7 +32,7 @@ function Login() {
         .then((res) => res.json())
         .then((data) => console.log(data))
         .then(() => {
-          window.localStorage.setItem('token','abvgd')
+          window.localStorage.setItem('token', 'abvgd')
           e.target.name.value = ''
           e.target.phone.value = ''
           e.target.email.value = ''
@@ -49,18 +49,19 @@ function Login() {
       .then((users) => setData(users))
   }, [])
 
-  function fnIN(e){
+  function fnIn(e) {
     e.preventDefault()
     let info = {
       email: e.target.email.value,
-      password: e.target.name.value,
+      password: e.target.password.value,
     }
-    let findUser = data.find((item)=> item.email == info.email && item.password == info.password)
-    if(findUser){
-      window.localStorage.setItem('token','abvgd')
-        navigate('/')
-    }else{
-      alert('"User Not Found"')
+    let findUser = data.find((item) => item.email == info.email && item.password == info.password)
+    console.log(info);
+    if (findUser) {
+      window.localStorage.setItem('token', 'abvgd')
+      navigate('/')
+    } else {
+      alert("User Not Found")
     }
   }
 
@@ -76,13 +77,13 @@ function Login() {
             </div>
             <form onSubmit={fnUp} className='singup_right' action="#">
               <h1 className='signup__title'>Sign up</h1>
-              <p className='signup__link'>Already have an account? <button onClick={() => setShow(false)}>Log in</button></p>
               <input className='input__value ' name='name' type="text" placeholder='First name' />
               <input className='input__value ' name='phone' type="text" placeholder='Phone' />
               <input className='input__value ' name='email' type="text" placeholder='Email' />
               <input className={confirm ? 'form__red' : 'input__value'} name='password' type="text" placeholder='Password' />
               <input className={confirm ? 'form__red' : 'input__value'} name='confirm' type="text" placeholder='Password Confirm' />
-              <button class='next__step'>Next step</button>
+              <button type='submit' class='next__step'>Next step</button>
+              <p className='signup__link'>Already have an account? <button onClick={() => setShow(false)}>Log in</button></p>
             </form>
           </div>
 
@@ -92,12 +93,12 @@ function Login() {
             <div className='signup__left'>
               <img src={loginbg} alt="" />
             </div>
-            <form onSubmit={fnIN} className='singup_right' action="#">
+            <form onSubmit={fnIn} className='singup_right' action="#">
               <h1 className='signup__title'>Log in</h1>
               <p className='signup__link'>Do not you have an account?  <button onClick={() => setShow(true)}>Sign up</button></p>
               <input className='input__value ' name='email' type="text" placeholder='Email' />
               <input className='input__value ' name='password' type="text" placeholder='Password' />
-              <button className='next__step'>Next step</button>
+              <button type='submit' className='next__step'>Next step</button>
             </form>
           </div>
       }
