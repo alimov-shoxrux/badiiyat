@@ -55,9 +55,9 @@ function Login() {
       email: e.target.email.value,
       password: e.target.name.value,
     }
-    let findEser = data.find((item)=> item.email == info.email && item.password == info.password)
-    if(findEser){
-      window.localStorage.setItem('tpoken','abvgd')
+    let findUser = data.find((item)=> item.email == info.email && item.password == info.password)
+    if(findUser){
+      window.localStorage.setItem('token','abvgd')
         navigate('/')
     }else{
       alert('"User Not Found"')
